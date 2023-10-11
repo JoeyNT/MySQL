@@ -49,8 +49,56 @@
 </body>
 </html>
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-</p>
+<h3 align="left">ENTITY & ATTRIBUTE DESCRIPTIONS</h3>
+<h4 align="left">ENTITIES:
+</h4>
+<p align="left">Consumer: Any physical person requiring the service 
 
-<h3 align="left">Languages and Tools:</h3>
+Device: Phone device or any device requiring a data connection
+
+Account: Already Existing Lifetime account, directly connected to the consumer's main owner
+
+Invoice: Payment request sent to the account owner 
+
+Payment: The actual amount paid by the consumer (the actual transaction)
+
+Line: Single data line per device
+
+Plan: Collection of lines and type of promotion, or deal the consumer is locked into :
+</p>
+<h4 align="left">ATTRIBUTES:
+</h4>
+<p align="left">Customer<br> 
+Customer: 13-digit Identification Number of Individual Person in System.<br> 
+Phone Number: 10-Digit Number<br> 
+
+Account<br>
+Account ID: 8 Digit Identification of Account<br> 
+IMEI: International Mobile Equipment Identity: ID of SIM in Device.<br> 
+Billing Address: Address Invoices are sent to.<br> 
+AccountSince: Account Creation Date<br> 
+
+Invoice<br>
+Billing Amount: Amount Added for Last Month onto the Account Balance<br> 
+Account Balance: Total Amount Due on Account<br> 
+Minimum Payment: Minimum Amount of Payment Amount due to keeping the Account Active.<br> 
+
+Device<br>
+IMEI: International Mobile Equipment Identity: ID of SIM in Device.<br> 
+Manufacturer: Maker of the Phone:<br> 
+
+Payment<br>
+PaymentID: 9 Digit Unique VARCHAR.<br> 
+Payment Amount: Must be >= Minimum Amount on Invoice.<br> 
+
+Line<br> 
+Line ID: 7 VARCHAR that identifies the Line of a Cellular Connection.<br> 
+LineActiveDate: Date Line was initially activated<br> 
+
+Plan<br>
+PlanID: Unique 13 VARCHAR that identifies an account plan.<br> 
+PlanType: Type of Plan (Single or Family)<br> 
+Plan Price: Monthly Cost of Plan<br> 
+Plan Start: Date account enrolled into the plan<br> 
+Plan Duration: Derived by subtracting the current date from Plan Start<br> 
+</p>
