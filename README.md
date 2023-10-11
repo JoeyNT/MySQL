@@ -102,3 +102,25 @@ Plan Price: Monthly Cost of Plan<br>
 Plan Start: Date account enrolled into the plan<br> 
 Plan Duration: Derived by subtracting the current date from Plan Start<br> 
 </p>
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Business Rules</h2>
+    <ol>
+        <li>Each Customer must have at least one device.</li>
+        <li>A device must belong to only one customer.</li>
+        <li>Each device must have at least one line, but can also have many lines.</li>
+        <li>Each line must have only one device.</li>
+        <li>Each Plan must have many lines but must have at least one line.</li>
+        <li>Each Line must have only one plan.</li>
+        <li>Each Account must have only one plan.</li>
+        <li>Each plan must have only one account.</li>
+        <li>Each account must have many invoices.</li>
+        <li>Each invoice must have only one account.</li>
+        <li>Each invoice must have only one means of payment.</li>
+        <li>Each Payment must have many invoices.</li>
+        <li>A device may be an eSim device and have a physical sim at the same time.</li>
+        <li>A payment method may be an autopay method.</li>
+    </ol>
+</body>
+</html>
