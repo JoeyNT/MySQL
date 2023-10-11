@@ -102,8 +102,7 @@ Plan Price: Monthly Cost of Plan<br>
 Plan Start: Date account enrolled into the plan<br> 
 Plan Duration: Derived by subtracting the current date from Plan Start<br> 
 </p>
-<!DOCTYPE html>
-<html>
+
 <body>
     <h2>Business Rules</h2>
     <ol>
@@ -122,6 +121,6 @@ Plan Duration: Derived by subtracting the current date from Plan Start<br>
         <li>A device may be an eSim device and have a physical SIM at the same time.</li>
         <li>A payment method may be an autopay method.</li>
     </ol>
-</body>
-</html>
-<h2>Entry Relationship Diagram</h2> 
+
+<h2><a href="https://github.com/JoeyNT/MySQL/blob/main/Entry%20Relationship%20Diagram%20ERD%20.pdf">Entry Relationship Diagram</a></h2>
+<h2><a href="https://github.com/JoeyNT/MySQL/blob/main/Relation%20Model%203NF%20.pdf">Relation Model 3NF</a></h2>
