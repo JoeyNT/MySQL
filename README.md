@@ -85,7 +85,7 @@ Minimum Payment: Minimum Amount of Payment Amount due to keeping the Account Act
 
 Device<br>
 IMEI: International Mobile Equipment Identity: ID of SIM in Device.<br> 
-Manufacturer: Maker of the Phone:<br> 
+Manufacturer: Maker of the Phone(Apple, Samsung, LG, HTC, Nokia, etc..) <br> 
 
 Payment<br>
 PaymentID: 9 Digit Unique VARCHAR.<br> 
