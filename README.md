@@ -122,5 +122,6 @@ Plan Duration: Derived by subtracting the current date from Plan Start<br>
         <li>A payment method may be an autopay method.</li>
     </ol>
 
-<h2><a href="https://github.com/JoeyNT/MySQL/blob/main/Entry%20Relationship%20Diagram%20ERD%20.pdf">Entry Relationship Diagram</a></h2>
+<h2><a href="https://github.com/JoeyNT/MySQL/blob/main/Entry%20Relationship%20Diagram%20ERD%20.pdf">Entry Relationship Diagram</a></h2> 
+<img src="https://github.com/JoeyNT/MySQL/blob/main/Entry%20Relationship%20Diagram%20ERD%20.pdf" >
 <h2><a href="https://github.com/JoeyNT/MySQL/blob/main/Relation%20Model%203NF%20.pdf">Relation Model 3NF</a></h2>
