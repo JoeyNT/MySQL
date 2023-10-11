@@ -119,8 +119,9 @@ Plan Duration: Derived by subtracting the current date from Plan Start<br>
         <li>Each invoice must have only one account.</li>
         <li>Each invoice must have only one means of payment.</li>
         <li>Each Payment must have many invoices.</li>
-        <li>A device may be an eSim device and have a physical sim at the same time.</li>
+        <li>A device may be an eSim device and have a physical SIM at the same time.</li>
         <li>A payment method may be an autopay method.</li>
     </ol>
 </body>
 </html>
+<h2>Entry Relationship Diagram</h2> 
