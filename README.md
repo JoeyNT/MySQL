@@ -106,7 +106,7 @@ Plan Duration: Derived by subtracting the current date from Plan Start<br>
 <body>
     <h2>Business Rules</h2>
     <ol>
-        <li>Each Customer must have at least one device.</li>
+        <li>Each Customer must have at least one device.<li>
         <li>A device must belong to only one customer.</li>
         <li>Each device must have at least one line, but can also have many lines.</li>
         <li>Each line must have only one device.</li>
@@ -127,6 +127,32 @@ Plan Duration: Derived by subtracting the current date from Plan Start<br>
 <h2><a href="https://github.com/JoeyNT/MySQL/blob/main/Relation%20Model%203NF%20.jpg">Relation Model 3NF</a></h2>
 <img src="https://github.com/JoeyNT/MySQL/blob/main/Relation%20Model%203NF%20.jpg" >
 <h2><a href="https://github.com/JoeyNT/MySQL/blob/main/U-Mobile.sql">Tables Creation & Data Entry</a></h2> 
- <h4>SQL File Link</h4>
-    <p>You can access the SQL file by clicking the link below:</p>
-    <a href="https://github.com/JoeyNT/MySQL/blob/main/U-Mobile.sql" target="_blank">Download SQL File</a>
+<h4>SQL File Link</h4>
+<p>You can access the SQL file by clicking the link below:</p>
+<a href="https://github.com/JoeyNT/MySQL/blob/main/U-Mobile.sql" target="_blank">Download SQL File</a>
+<h2>Examples of Data Retrieval (SELECT STATEMENT)</h2>
+<ol><li><h4>Show CustomerID and customer names of customers who have plan prices above $90. Show the prices from lowest to highest.</h4></li>
+<p> SELECT C.CustomerID, C.Name, P.PlanPrice AS Price <br>
+FROM Customer C, Account A, Plan P<br>
+WHERE C.AccountNo = A.AccountNo AND A.AccountNo = P.AccountNo<br>
+AND P.PlanPrice > 90<br>
+ORDER BY P.PlanPrice<br>
+</p>
+<img src="https://github.com/JoeyNT/MySQL/blob/main/Ex%201.jpg" ><br>
+
+<li><h4>Show customer ID, AccountNo, and customer name for customer(s) who have the same dates for both the line activation and Plan start date.</h4></li>
+<p> SELECT C.CustomerID, C.Name, A.AccountNo, L.LineActiveDate, P.PlanStartDate <br>
+FROM Customer C, Plan P, Account A, Line L<br>
+WHERE C.AccountNo = A.AccountNo<br>
+AND A.AccountNo = P.AccountNo<br>
+AND L.PlanID = P.PlanID<br>
+AND L.LineActiveDate = P.PlanStartDate<br>
+</p>
+<img src="https://github.com/JoeyNT/MySQL/blob/main/Ex%202.jpg" ><br>
+<li><h4>Display the Average Minimum Amount and Payment Amount for Each Account Type.</h4></li>
+<p>USE U_Mobile; <br>
+<br>
+SELECT PL.PlanType, AVG(P.PaymentAmount) AS AveragePayment, AVG(I.MinPaymentDue) AS AverageAmountDue <br>
+FROM Payment P, Invoice I, Account A, Plan PL<br>
+AND A.AccountNo = PL.AccountNo<br>
+GROUP BY(PL.PlanType);<br>
