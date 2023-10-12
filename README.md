@@ -169,7 +169,7 @@ WHERE P.InvoiceID = I.InvoiceID AND I.AccountNo = A.AccountNo<br>
 AND A.AccountNo = C.AccountNo AND C.CustomerID = D.CustomerID<br>
 GROUP BY D.Manufacturer;<br>
 </p>
-<img src="" ><br>
+<img src="https://github.com/JoeyNT/MySQL/blob/main/Ex%204.jpg" ><br>
 
 <li><h4>Show the device manufacturer, plan ID, plan type, and plan prices for each plan that has a price above $80.</h4></li>
 
