@@ -179,4 +179,23 @@ INNER JOIN Line L ON D.IMEI = L.IMEI<br>
 INNER JOIN Plan P ON L.PlanID = P.PlanID<br>
 WHERE P.PlanPrice > 80<br>
 </p>
-<img src="" ><br>
+<img src="https://github.com/JoeyNT/MySQL/blob/main/Ex%205.jpg" ><br>
+</ol>
+
+<h2>CONCLUSION</h2>
+<p> In summary, the project "U-Mobile Telecommunications" focuses on improving the customer experience within a phone service provider by allowing online identification verification for existing plans. This enhancement enables existing members to add new members to their plan online, provided they have an e-SIM.<br>
+
+The project includes an Entity-Attribute Chart, describing the essential entities and their associated attributes. It outlines the key aspects of the system, including customers, devices, accounts, invoices, payments, lines, and plans, along with their respective attributes.<br>
+
+The Entity and Attribute Descriptions provide an in-depth understanding of the data model and its components. Entities are defined, including consumers, devices, accounts, invoices, payments, lines, and plans, each with its unique identifiers and associated attributes.<br>
+
+The project outlines a set of business rules, ensuring the integrity and consistency of the system. These rules cover relationships between customers, devices, lines, plans, accounts, invoices, payments, and more, providing a comprehensive framework for the system's operations.<br>
+
+The project also presents an Entry Relationship Diagram, showcasing the data relationships in the system.<br>
+
+It concludes with SQL examples, demonstrating how to retrieve specific data from the database. These examples illustrate SQL queries for finding customers with specific criteria, calculating averages for account types, and more.<br>
+
+Additionally, the SQL file for this project can be accessed by clicking on the provided link, allowing users to download the SQL file for further reference.<br>
+
+The project aims to streamline customer processes and enhance the efficiency of a telecommunications service provider through well-defined data modeling and structured SQL queries.
+</p>
