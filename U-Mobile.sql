@@ -5,11 +5,11 @@ USE U_Mobile;
 CREATE TABLE Account
     (
      AccountNo 		INT   		NOT NULL, 
-     Name 		VARCHAR(15)    NOT NULL,
-    AccountSince 		INT,
-    BillingStreet 		VARCHAR(15),
+     Name 		VARCHAR(15)	NOT NULL,
+    AccountSince 	INT,
+    BillingStreet 	VARCHAR(15),
     BillingCity		VARCHAR(15),
-    BillingState		VARCHAR(2),
+    BillingState	VARCHAR(2),
     BillingZip		INT 		NOT NULL,
 
        CONSTRAINT Account_PK PRIMARY KEY (AccountNo),
@@ -24,10 +24,10 @@ VALUES
 CREATE TABLE Customer
     (
       CustomerID 	INT   NOT NULL,
-      AccountNo    INT    NOT NULL
-      Name 	VARCHAR(20), 
-      Address	VARCHAR(50), 
-      Email 	VARCHAR(20),
+      AccountNo    	INT    NOT NULL
+      Name 		VARCHAR(20), 
+      Address		VARCHAR(50), 
+      Email 		VARCHAR(20),
 
        CONSTRAINT Cust_PK PRIMARY KEY (CustomerID)
        CONSTRAINT Customer_FK FOREIGN KEY(AccountNo) REFERENCES Account(AccountNo)
@@ -41,10 +41,10 @@ VALUES
 	  
 CREATE TABLE Device
     (
-      IMEI 	VARCHAR(15)  NOT NULL,
-     CustomerID 	INT   NOT NULL,
+      IMEI 		VARCHAR(15)	NOT NULL,
+     CustomerID 	INT   		NOT NULL,
      Manufacturer 	VARCHAR(15),
-     eSIM 	VARCHAR(25), 
+     eSIM 		VARCHAR(25), 
      SIM		VARCHAR(25),
 
        CONSTRAINT Device_PK PRIMARY KEY (IMEI),
@@ -62,7 +62,7 @@ VALUES
 
 CREATE TABLE eSimType
     (
-      NPSIM 		VARCHAR(15)   NOT NULL, 
+      NPSIM 		VARCHAR(15)   	NOT NULL, 
      RegisterOnline 	VARCHAR(1)	CHECK (RegisterOnline IN (‘Y’),
 
        CONSTRAINT Device_PK PRIMARY KEY (NPSIM),
@@ -92,9 +92,9 @@ VALUES
 
 CREATE TABLE Line
   (
-    IMEI	 		VARCHAR(15)      NOT NULL,
-    PlanID  		INT      NOT NULL, 
-    LineActiveDate	DATE   NOT NULL, 
+    IMEI	 	VARCHAR(15)	NOT NULL,
+    PlanID  		INT     	NOT NULL, 
+    LineActiveDate	DATE   		NOT NULL, 
 
        CONSTRAINT Line_PK PRIMARY KEY (PlanID, IMEI),
        CONSTRAINT Line_FK FOREIGN KEY(PlanID) REFERENCES Plan (PlanID),
@@ -111,11 +111,11 @@ VALUES
 
 CREATE TABLE Plan
     (
-     PlanID 		INT   NOT NULL, 
-     AccountNo 		INT   NOT NULL,
+     PlanID 		INT   	NOT NULL, 
+     AccountNo 		INT   	NOT NULL,
      PlanType 		VARCHAR(15),
      PlanPrice 		DECIMAL(2), 
-     PlanStartDate		DATE   NOT NULL
+     PlanStartDate	DATE   	NOT NULL
 
        CONSTRAINT Plan_PK PRIMARY KEY (PlanID),
        CONSTRAINT Plan_FK FOREIGN KEY(AccountNo) REFERENCES Account (AccountNo),
@@ -129,8 +129,8 @@ VALUES
 
 CREATE TABLE Invoice
     (
-      InvoiceID 		INT   NOT NULL, 
-     AccountNo 		INT   NOT NULL,
+      InvoiceID 	INT   	NOT NULL, 
+     AccountNo 		INT  	NOT NULL,
      BillingAmount 	DECIMAL(2),
      MinPaymentDue	DECIMAL(2), 
      TotalAccntBalance	DECIMAL(2), 
@@ -141,9 +141,9 @@ CREATE TABLE Invoice
 
 INSERT INTO INVOICE(InvoiceID, AccountNo, BillingAmount, MinPaymentDue, TotalAccntBalance)
 VALUES
-(14780976 , 778294, 200.50 ,100,1000),
+(14780976, 778294, 200.50, 100, 1000),
 (47370448, 219912, 300.75, 300, 500),
-(1859065,673354,500.75 ,250, 2000);
+(1859065, 673354, 500.75 ,250, 2000);
 
 
 
@@ -155,7 +155,7 @@ CREATE TABLE Payment
     (
       PaymentID 		INT   NOT NULL, 
       InvoiceID 		INT   NOT NULL,
-      PaymentAmount 	DECIMAL(2),
+      PaymentAmount 		DECIMAL(2),
       PaymentType		VARCHAR(10),  
 
        CONSTRAINT Payment_PK PRIMARY KEY (PaymentID),
@@ -170,8 +170,8 @@ VALUES
 
 CREATE TABLE AutoType
     (
-     AutoPayID 		INT   NOT NULL, 
-     CreditCardOnFile 	VARCHAR(50),
+     AutoPayID 			INT   NOT NULL, 
+     CreditCardOnFile 		VARCHAR(50),
 
        CONSTRAINT Payment_PK PRIMARY KEY (AutoPayID),
        CONSTRAINT Payment_FK FOREIGN KEY(AutoPayID) REFERENCES Payment (PaymentID),
