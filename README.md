@@ -1,4 +1,4 @@
-# MySQL Managing Enterprise Data ISYS 464
+<h1 align="center"> MySQL Managing Enterprise Data ISYS 464</h1>
 
 <h1 align="center">U-Mobile </h1>
 <h3 align="center">Telecommunications (Phone Service Provider)</h3>
