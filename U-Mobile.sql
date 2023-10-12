@@ -146,11 +146,6 @@ VALUES
 (1859065, 673354, 500.75 ,250, 2000);
 
 
-
-
-
-
-
 CREATE TABLE Payment
     (
       PaymentID 		INT   NOT NULL, 
