@@ -106,7 +106,7 @@ Plan Duration: Derived by subtracting the current date from Plan Start<br>
 <body>
     <h2>Business Rules</h2>
     <ol>
-        <li>Each Customer must have at least one device.<li>
+        <li>Each Customer must have at least one device.</li>
         <li>A device must belong to only one customer.</li>
         <li>Each device must have at least one line, but can also have many lines.</li>
         <li>Each line must have only one device.</li>
