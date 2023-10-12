@@ -149,6 +149,7 @@ AND L.PlanID = P.PlanID<br>
 AND L.LineActiveDate = P.PlanStartDate<br>
 </p>
 <img src="https://github.com/JoeyNT/MySQL/blob/main/Ex%202.jpg" ><br>
+
 <li><h4>Display the Average Minimum Amount and Payment Amount for Each Account Type.</h4></li>
 <p>USE U_Mobile; <br>
 <br>
@@ -156,3 +157,26 @@ SELECT PL.PlanType, AVG(P.PaymentAmount) AS AveragePayment, AVG(I.MinPaymentDue)
 FROM Payment P, Invoice I, Account A, Plan PL<br>
 AND A.AccountNo = PL.AccountNo<br>
 GROUP BY(PL.PlanType);<br>
+</p>
+<img src="https://github.com/JoeyNT/MySQL/blob/main/Ex%203.jpg" ><br>
+
+<li><h4>Display Customers with either Apple or Samsung, their Average: Account Balance, Minimum Payment, and PaymentDue</h4></li>
+
+<p>SELECT D.Manufacturer AS Brand, AVG (I.TotalAccntBalance) AS AverageBalance, AVG(I.MinPaymentDue) AS MinimumDue,<br>
+AVG(P.PaymentAmount) AveragePayment<br>
+FROM Customer C, Device D, Invoice I, Account A, Payment P<br>
+WHERE P.InvoiceID = I.InvoiceID AND I.AccountNo = A.AccountNo<br>
+AND A.AccountNo = C.AccountNo AND C.CustomerID = D.CustomerID<br>
+GROUP BY D.Manufacturer;<br>
+</p>
+<img src="" ><br>
+
+<li><h4>Show the device manufacturer, plan ID, plan type, and plan prices for each plan that has a price above $80.</h4></li>
+
+<p>SELECT D.CustomerID, D.Manufacturer AS Brand, P.PlanType, P.PlanPrice, P.PlanID<br>
+FROM Device D<br>
+INNER JOIN Line L ON D.IMEI = L.IMEI<br>
+INNER JOIN Plan P ON L.PlanID = P.PlanID<br>
+WHERE P.PlanPrice > 80<br>
+</p>
+<img src="" ><br>
