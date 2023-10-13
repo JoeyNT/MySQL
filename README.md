@@ -151,7 +151,8 @@ AND L.PlanID = P.PlanID<br>
 AND L.LineActiveDate = P.PlanStartDate<br>
 </p>
 <img src="https://github.com/JoeyNT/MySQL/blob/main/Ex%202.jpg" ><br>
-
+<br> You can access the SQL Query file Ex 2 by clicking the link below:</p>
+<a href="https://github.com/JoeyNT/MySQL/blob/main/MySQLQueryEx2.sql" target="_blank">Download SQL File</a>
 
 <li><h4>Display the Average Minimum Amount and Payment Amount for Each Account Type.</h4></li>
 <p>USE U_Mobile; <br>
@@ -162,6 +163,8 @@ AND A.AccountNo = PL.AccountNo<br>
 GROUP BY(PL.PlanType);<br>
 </p>
 <img src="https://github.com/JoeyNT/MySQL/blob/main/Ex%203.jpg" ><br>
+<br> You can access the SQL Query file Ex 3 by clicking the link below:</p>
+<a href="https://github.com/JoeyNT/MySQL/blob/main/MySQLQueryEx3.sql" target="_blank">Download SQL File</a>
 
 <li><h4>Display Customers with either Apple or Samsung, their Average: Account Balance, Minimum Payment, and PaymentDue</h4></li>
 
@@ -173,6 +176,8 @@ AND A.AccountNo = C.AccountNo AND C.CustomerID = D.CustomerID<br>
 GROUP BY D.Manufacturer;<br>
 </p>
 <img src="https://github.com/JoeyNT/MySQL/blob/main/Ex%204.jpg" ><br>
+<br> You can access the SQL Query file Ex 4 by clicking the link below:</p>
+<a href="https://github.com/JoeyNT/MySQL/blob/main/MySQLQueryEx4.sql" target="_blank">Download SQL File</a>
 
 <li><h4>Show the device manufacturer, plan ID, plan type, and plan prices for each plan that has a price above $80.</h4></li>
 
@@ -183,6 +188,8 @@ INNER JOIN Plan P ON L.PlanID = P.PlanID<br>
 WHERE P.PlanPrice > 80<br>
 </p>
 <img src="https://github.com/JoeyNT/MySQL/blob/main/Ex%205.jpg" ><br>
+<br> You can access the SQL Query file Ex 5 by clicking the link below:</p>
+<a href="https://github.com/JoeyNT/MySQL/blob/main/MySQLQueryEx5.sql" target="_blank">Download SQL File</a>
 </ol>
 
 <h2>CONCLUSION</h2>
