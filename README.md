@@ -127,7 +127,7 @@ Plan Duration: Derived by subtracting the current date from Plan Start<br>
 <h2><a href="https://github.com/JoeyNT/MySQL/blob/main/Relation%20Model%203NF%20.jpg">Relation Model 3NF</a></h2>
 <img src="https://github.com/JoeyNT/MySQL/blob/main/Relation%20Model%203NF%20.jpg" >
 <h2><a href="https://github.com/JoeyNT/MySQL/blob/main/U-Mobile.sql">Tables Creation & Data Entry</a></h2> 
-<h4>SQL File Link</h4>
+
 <p>You can access the SQL file by clicking the link below:</p>
 <a href="https://github.com/JoeyNT/MySQL/blob/main/U-Mobile.sql" target="_blank">Download SQL File</a>
 <h2>Examples of Data Retrieval (SELECT STATEMENT)</h2>
@@ -139,6 +139,8 @@ AND P.PlanPrice > 90<br>
 ORDER BY P.PlanPrice<br>
 </p>
 <img src="https://github.com/JoeyNT/MySQL/blob/main/Ex%201.jpg" ><br>
+<br> You can access the SQL Query file Ex 1 by clicking the link below:</p>
+<a href="https://github.com/JoeyNT/MySQL/blob/main/MySQLQueryEx1.sql" target="_blank">Download SQL File</a>
 
 <li><h4>Show customer ID, AccountNo, and customer name for customer(s) who have the same dates for both the line activation and Plan start date.</h4></li>
 <p> SELECT C.CustomerID, C.Name, A.AccountNo, L.LineActiveDate, P.PlanStartDate <br>
@@ -149,6 +151,7 @@ AND L.PlanID = P.PlanID<br>
 AND L.LineActiveDate = P.PlanStartDate<br>
 </p>
 <img src="https://github.com/JoeyNT/MySQL/blob/main/Ex%202.jpg" ><br>
+
 
 <li><h4>Display the Average Minimum Amount and Payment Amount for Each Account Type.</h4></li>
 <p>USE U_Mobile; <br>
